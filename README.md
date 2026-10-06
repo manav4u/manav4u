@@ -1,11 +1,9 @@
-<picture>
-  <img src="assets/beginning.svg" alt="Manav. This page is a beginning, not a summary." width="100%">
-</picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/beginning.svg"><source media="(prefers-color-scheme: light)" srcset="assets/beginning-light.svg"><img src="assets/beginning-light.svg" alt="Manav. This page is a beginning, not a summary." width="100%"></picture>
 
 <p align="left">
-  <a href="https://gg-buddy.vercel.app/"><img src="assets/link-gg-buddy.svg" alt="Explore gg buddy" height="32"></a>
-  <a href="https://github.com/manav4u/PrepTracker"><img src="assets/link-preptracker.svg" alt="PrepTracker source" height="32"></a>
-  <a href="https://x.com/ManavShips"><img src="assets/link-x.svg" alt="X: @ManavShips" height="32"></a>
+  <a href="https://gg-buddy.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-gg-buddy.svg"><source media="(prefers-color-scheme: light)" srcset="assets/link-gg-buddy-light.svg"><img src="assets/link-gg-buddy-light.svg" alt="Explore gg buddy" height="32"></picture></a>
+  <a href="https://github.com/manav4u/PrepTracker"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-preptracker.svg"><source media="(prefers-color-scheme: light)" srcset="assets/link-preptracker-light.svg"><img src="assets/link-preptracker-light.svg" alt="PrepTracker source" height="32"></picture></a>
+  <a href="https://x.com/ManavShips"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-x.svg"><source media="(prefers-color-scheme: light)" srcset="assets/link-x-light.svg"><img src="assets/link-x-light.svg" alt="X: @ManavShips" height="32"></picture></a>
 </p>
 
 I build things that make learning less abstract. Right now, that means a visual Git course, an academic tracker, and experiments with AI-assisted development.
@@ -72,4 +70,4 @@ Tools are context, not trophies. The projects above show where I've used them.
 
 I'm also testing viral tech claims and sharing what holds up on [X, @ManavShips](https://x.com/ManavShips).
 
-<img src="assets/closing.svg" alt="Build things that matter. This profile will look very different in 12 months." width="100%">
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/closing.svg"><source media="(prefers-color-scheme: light)" srcset="assets/closing-light.svg"><img src="assets/closing-light.svg" alt="Build things that matter. This profile will look very different in 12 months." width="100%"></picture>
