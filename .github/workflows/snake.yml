@@ -1,0 +1,45 @@
+name: Contribution snake
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 1 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Generate light and dark contribution snakes
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: manav4u
+          outputs: |
+            dist/contribution-snake-dark.svg?palette=github-dark&color_snake=#e4d4ff&color_dots=#21152e,#40205e,#67349c,#9456d8,#c59aff
+            dist/contribution-snake-light.svg?palette=github-light&color_snake=#7F00FF&color_dots=#ede7f5,#d8c2f4,#b084e0,#8d4dcb,#641baa
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish generated SVGs to the output branch
+        working-directory: dist
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -eu
+          test -s contribution-snake-dark.svg
+          test -s contribution-snake-light.svg
+          git init -b output
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add contribution-snake-dark.svg contribution-snake-light.svg
+          git commit -m 'Refresh contribution snake'
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push --force "https://github.com/${REPOSITORY}.git" HEAD:output
