@@ -1,60 +1,30 @@
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/beginning.svg"><source media="(prefers-color-scheme: light)" srcset="assets/beginning-light.svg"><img src="assets/beginning-light.svg" alt="Manav. This page is a beginning, not a summary." width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/profile-header-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/profile-header-light.svg"><img src="assets/profile-header-light.svg" alt="Manav. Tools that make learning less abstract." width="100%"></picture>
 
-<p align="left">
-  <a href="https://gg-buddy.vercel.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-gg-buddy.svg"><source media="(prefers-color-scheme: light)" srcset="assets/link-gg-buddy-light.svg"><img src="assets/link-gg-buddy-light.svg" alt="Explore gg buddy" height="32"></picture></a>
-  <a href="https://github.com/manav4u/PrepTracker"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-preptracker.svg"><source media="(prefers-color-scheme: light)" srcset="assets/link-preptracker-light.svg"><img src="assets/link-preptracker-light.svg" alt="PrepTracker source" height="32"></picture></a>
-  <a href="https://x.com/ManavShips"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-x.svg"><source media="(prefers-color-scheme: light)" srcset="assets/link-x-light.svg"><img src="assets/link-x-light.svg" alt="X: @ManavShips" height="32"></picture></a>
-</p>
+[Portfolio](https://manavdev.site/) · [gg buddy](https://gg-buddy.vercel.app/) · [PrepTracker source](https://github.com/manav4u/PrepTracker) · [X: @ManavShips](https://x.com/ManavShips)
 
-I build things that make learning less abstract. Right now, that means a visual Git course, an academic tracker, and experiments with AI-assisted development.
+I build tools that make learning less abstract: visual Git lessons, study tools, and experiments with AI-assisted development.
 
 ## Selected work
 
-### 01 / gg buddy
+### gg buddy
 
-**Learn Git by seeing it happen.**
-
-<a href="https://gg-buddy.vercel.app/"><img src="assets/gg-buddy-home.png" alt="gg buddy home page: a visual Git course with interactive lessons" width="100%"></a>
-
-Nine beginner chapters. Visual explanations, clickable installer replicas, and a practice terminal for trying commands without risking a real repository.
-
-- **Practice, don't just read.** A simulated Git lab and a searchable 247-command cheat sheet.
-- **Pick up where you left off.** Saved chapter progress and a copy-progress-link feature for carrying it to another device.
-- **Keep learning offline.** An installable PWA with cached course pages.
+A visual Git course with beginner lessons and a practice terminal. Try the live course to see the interface and learning approach. Application source stays private.
 
 **Built with:** Astro · JavaScript · CSS · Vercel
 
-[Explore the course →](https://gg-buddy.vercel.app/)
+[Explore the course](https://gg-buddy.vercel.app/)
 
-<details>
-<summary>Inside the practice lab</summary>
-<br>
-<img src="assets/gg-buddy-lab.png" alt="gg buddy practice terminal showing simulated Git commands and commit output" width="100%">
-<br>
-A safe place to get the mental model right before using Git on your own files. It's a simulation, not a hosted shell.
-</details>
+### PrepTracker
 
-### 02 / PrepTracker
+An academic dashboard for syllabus progress, study resources, and tasks. Study progress and tasks are saved in your browser. The site also includes Google Analytics; local storage does not mean no tracking.
 
-**A little less chaos before the exam.**
+**Built with:** React 19 · TypeScript · Tailwind CSS · Vite · React Router 7
 
-<img src="assets/preptracker.png" alt="PrepTracker project landing page: Engineer Your Academic Success" width="100%">
+[Try PrepTracker](https://manav4u.github.io/PrepTracker/) · [Read the source](https://github.com/manav4u/PrepTracker)
 
-An academic dashboard for syllabus progress, study resources, and tasks. Progress is stored locally in the browser.
+## How I work
 
-**Built with:** React · TypeScript · Tailwind CSS · Vite
-
-[Read the source →](https://github.com/manav4u/PrepTracker)
-
-## A smaller, honest stack
-
-| | What belongs here |
-| :--- | :--- |
-| **Current work** | Git, GitHub, browser-based interfaces |
-| **Built with** | Astro, React, TypeScript, JavaScript, CSS, Tailwind CSS, Vite, Vercel |
-| **Exploring** | AI-assisted workflows and product building |
-
-Tools are context, not trophies. The projects above show where I've used them.
+I use AI-assisted workflows to build browser-based interfaces. The project links above show the work, and PrepTracker's public repository lets you inspect its implementation.
 
 ## One commit at a time
 
@@ -64,10 +34,4 @@ Tools are context, not trophies. The projects above show where I've used them.
   <img alt="An animated snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/manav4u/manav4u/output/contribution-snake-light.svg" width="100%">
 </picture>
 
-<sub>My contribution graph, with a snake doing the cleanup. Generated daily by GitHub Actions.</sub>
-
-## Beyond the repos
-
-I'm also testing viral tech claims and sharing what holds up on [X, @ManavShips](https://x.com/ManavShips).
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/closing.svg"><source media="(prefers-color-scheme: light)" srcset="assets/closing-light.svg"><img src="assets/closing-light.svg" alt="Build things that matter. This profile will look very different in 12 months." width="100%"></picture>
+<sub>Generated daily by GitHub Actions.</sub>
