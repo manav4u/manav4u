@@ -24,6 +24,10 @@ An academic dashboard for syllabus progress, resources, and tasks. Progress is s
 ## How I work
 I use AI-assisted workflows to build and refine browser-based interfaces. The links above show what I've made so far, not the limits of what I'll build next.
 
+## Hacktoberfest 2025
+
+[![My Hacktoberfest 2025 Holopin badges](https://holopin.me/manav4u)](https://www.holopin.io/@manav4u)
+
 ## One commit at a time
 
 <picture>
