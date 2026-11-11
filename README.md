@@ -38,7 +38,9 @@ An empirical study of **reward hacking (specification gaming)** vs. **potential-
 ## Open-Source Contributions
 
 **Merged**
-- **[`rapidfuzz/RapidFuzz#505`](https://github.com/rapidfuzz/RapidFuzz/pull/505)** — Fixed falsey callable `processor` handling in `cdist` and `cpdist` across Cython and Python fallback paths, adding regression tests across 30 processor test cases.
+- **[`rapidfuzz/RapidFuzz#505`](https://github.com/rapidfuzz/RapidFuzz/pull/505)** — Honor falsey callable `processor` arguments in `cdist` and `cpdist` across Cython and Python fallback paths, with 30 regression test cases.
+- **[`tree-sitter-python-orchard#15`](https://codeberg.org/grammar-orchard/tree-sitter-python-orchard/pulls/15)** — Give bitwise `AND` higher operator precedence than `XOR` in the Python Tree-sitter grammar *(merged on Codeberg)*.
+- **[`jquast/wcwidth#316`](https://github.com/jquast/wcwidth/pull/316)** *(via [`#310`](https://github.com/jquast/wcwidth/pull/310))* — Preserve terminal SGR styles when dropping whitespace-only wrapped lines *(maintainer-merged PR incorporating five commits from `#310` with co-author credit)*.
 
 **Currently Under Review**
 - **[`Quantinuum/guppylang#2517`](https://github.com/Quantinuum/guppylang/pull/2517)** — Preserve qualified names for `comptime` functions in diagnostics and type representations.
