@@ -20,7 +20,7 @@ When developers copy network requests from browser DevTools (*"Copy as cURL"*), 
 
 ## 2. Pipeline Architecture
 
-All parsing, normalization, static analysis, and code generation execute 100% locally in the browser using a pure TypeScript pipeline (`src/lib/curl-parser.ts`, `src/lib/curl-cleanup.ts`, and `src/lib/capability.ts`).
+Parsing, normalization, static analysis, and code generation execute locally in the browser without network calls using a pure TypeScript pipeline (`src/lib/curl-parser.ts`, `src/lib/curl-cleanup.ts`, and `src/lib/capability.ts`). Only the optional interactive **Run** panel dispatches network requests via browser `fetch()`.
 
 ```mermaid
 flowchart LR
@@ -81,14 +81,15 @@ Two pure static-analysis passes inspect `ParsedCurl`:
   > **Important Security Qualification:** Credential detection is heuristic and cannot guarantee identification of every sensitive value or custom token format. Users should always inspect and review requests before sharing links or pasting generated code.
 
 ### 4. Target Code Generation & Capability Matrix (`src/lib/capability.ts`)
-From `ParsedCurl`, 18 dedicated target generators emit idiomatic request code:
-- **JavaScript / Node.js:** `fetch`, `axios`, `ky`, Node native `fetch`
-- **Python:** `requests`, `httpx`, `aiohttp`
-- **Go:** `net/http`
-- **Rust:** `reqwest`
-- **PHP:** `ext-curl`, `Guzzle`
-- **JVM / .NET / Apple:** Java `OkHttp`, Kotlin `OkHttp`, C# `HttpClient`, Swift `URLSession`
-- **Shell / CLI:** PowerShell `Invoke-RestMethod`, `HTTPie`
+From `ParsedCurl`, **18 dedicated target generators** across 13 language/runtime environments emit idiomatic request code:
+- **JavaScript / Node.js (4):** `fetch`, `axios`, `ky`, Node.js native `fetch`
+- **Python (3):** `requests`, `httpx`, `aiohttp`
+- **Go (1):** `net/http`
+- **Rust (1):** `reqwest`
+- **PHP (2):** `ext-curl`, `Guzzle`
+- **Ruby (1):** `Net::HTTP`
+- **JVM / .NET / Apple (4):** Java `OkHttp`, Kotlin `OkHttp`, C# `HttpClient`, Swift `URLSession`
+- **Shell / CLI (2):** PowerShell `Invoke-RestMethod`, `HTTPie`
 
 When a parsed option (e.g., `--tlsv1.3`, `--cert`, or `--retry`) cannot be expressed natively in a given target library without custom transport boilerplate, the capability verifier emits an explicit warning or inline comment rather than silently omitting the constraint.
 

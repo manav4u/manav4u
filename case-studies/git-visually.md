@@ -2,7 +2,7 @@
 
 **Live Product:** [git.manavdev.site](https://git.manavdev.site)  
 **Category:** Interactive Developer Education · Browser-Native Sandbox · Offline-First PWA  
-**Source Status:** Private production repository (this document details the system architecture, state design, verification fixtures, and automated testing pipeline).
+**Source Status:** Private production repository (this document details the system architecture, state design, representative test vectors, and automated testing pipeline).
 
 ---
 
@@ -78,7 +78,7 @@ flowchart TD
 
 ---
 
-## 4. Representative State & Verification Fixtures
+## 4. Representative State & Verification Vectors
 
 ### A. Monotonic Snapshot Merge Test Vector (`gv-progress-v1`)
 
@@ -114,7 +114,7 @@ When a user opens `/map/#gv=<base64url>`, the client decodes the incoming payloa
 }
 ```
 
-### B. Practice Terminal State Transition Fixture
+### B. Practice Terminal State Transition Vector
 
 Each simulated command mutates the virtual repository state `(workingTree, stagingIndex, commits, branches, HEAD)` and emits CLI output verified against real Git:
 

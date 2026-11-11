@@ -21,7 +21,7 @@ A zero-account study tracker and spaced-review workspace for SPPU engineering st
 ### 2. [Git, Visually (`gg-buddy`)](case-studies/git-visually.md) · Interactive Git Course & Browser Terminal Sandbox
 A 15-chapter visual Git and GitHub course with an in-browser practice terminal, interactive concept replicas, and a 243-command searchable cheat sheet.
 - **Architecture & state:** Custom 22-command in-browser Git state machine (virtual working tree, staging index, branch pointers, and live commit DAG) verified against 61 real `git` CLI outputs; zero-backend cross-device progress portability using shareable `#gv=` snapshots and monotonic state merging; network-first offline PWA service worker.
-- **Links:** [Live Course](https://git.manavdev.site/) · [Engineering Case Study & Test Fixtures](case-studies/git-visually.md) *(application source is private)*
+- **Links:** [Live Course](https://git.manavdev.site/) · [Engineering Case Study & Representative Test Vectors](case-studies/git-visually.md) *(application source is private)*
 
 ### 3. [Toolpaper (`curl-converter`)](case-studies/toolpaper-curl-converter.md) · Browser-Native cURL Transpiler & Sanitizer
 A client-side developer workbench that parses, cleans, explains, and converts cURL commands into request code across **18 language and library targets**.
@@ -38,12 +38,12 @@ An empirical study of **reward hacking (specification gaming)** vs. **potential-
 ## Open-Source Contributions
 
 **Merged**
+- **[`Quantinuum/guppylang#2517`](https://github.com/Quantinuum/guppylang/pull/2517)** — Compile and lower `comptime` functions with fully qualified names, with integration test coverage across module boundaries.
 - **[`rapidfuzz/RapidFuzz#505`](https://github.com/rapidfuzz/RapidFuzz/pull/505)** — Honor falsey callable `processor` arguments in `cdist` and `cpdist` across Cython and Python fallback paths, with 30 regression test cases.
+- **[`jquast/wcwidth#316`](https://github.com/jquast/wcwidth/pull/316)** — Preserve terminal SGR styles when dropping whitespace-only wrapped lines *(maintainer-integrated follow-up PR `#316`, which carried forward five commits authored in my original [`#310`](https://github.com/jquast/wcwidth/pull/310) submission, alongside maintainer follow-up changes)*.
 - **[`tree-sitter-python-orchard#15`](https://codeberg.org/grammar-orchard/tree-sitter-python-orchard/pulls/15)** — Give bitwise `AND` higher operator precedence than `XOR` in the Python Tree-sitter grammar *(merged on Codeberg)*.
-- **[`jquast/wcwidth#316`](https://github.com/jquast/wcwidth/pull/316)** *(via [`#310`](https://github.com/jquast/wcwidth/pull/310))* — Preserve terminal SGR styles when dropping whitespace-only wrapped lines *(maintainer-merged PR incorporating five commits from `#310` with co-author credit)*.
 
 **Currently Under Review**
-- **[`Quantinuum/guppylang#2517`](https://github.com/Quantinuum/guppylang/pull/2517)** — Preserve qualified names for `comptime` functions in diagnostics and type representations.
 - **[`lepture/mistune#552`](https://github.com/lepture/mistune/pull/552)** — Python 3.15 regex scanner compatibility fix.
 
 **Issue Investigation**
